@@ -1,0 +1,17 @@
+sudo: required
+
+langauge: generic
+
+services:
+     - docker
+
+before_install:
+     - echo "start dockerfile"
+     - docker build -t tglee/docker-react-app -f Dockerfile.dev .
+
+script :
+    - docker run -e CI=true tglee/docker-react-app npm run test -- --coverage
+
+after_success :
+    - echo "Test success"
+
