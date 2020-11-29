@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          닐리리 맘보
+          Learn React
         </a>
       </header>
     </div>
